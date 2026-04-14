@@ -145,7 +145,16 @@
               .setLngLat([-122.1279, 42.9290])
               .setPopup(popup3)
               .addTo(map3);
-            
+
+            map3.dragPan.disable();
+            map3.scrollZoom.disable();
+            map3.boxZoom.disable();
+            map3.dragRotate.disable();   // each line starts with "map2." because it calls the map2 variable
+            map3.keyboard.disable();
+            map3.doubleClickZoom.disable();
+            map3.touchZoomRotate.disable();
+            map3.touchZoomRotate.disableRotation();
+          
             // 2.6 Change the map pointers
             map.getCanvas().style.cursor = 'auto';
             map2.getCanvas().style.cursor = 'auto';
