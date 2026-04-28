@@ -21,7 +21,7 @@
         padding: 0;
       }
       /* CSS for choropleth map */
-      #choromap {
+      #symbolmap {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -40,11 +40,11 @@
 
   <body>
     <!-- Map div -->
-    <div id="choromap"></div>
+    <div id="symbolmap"></div>
 
     <!-- Title banner div -->
     <div id="banner">
-      <h1>Rockey Mountain NP Counties' Peaks</h1>
+      <h1>Rocky Mountain NP Counties' Peaks</h1>
     </div>
 
     <script> 
@@ -52,15 +52,15 @@
         mapboxgl.accessToken = 'pk.eyJ1IjoiandleWhyaWMiLCJhIjoiY21vaG40MHVrMDBzaTJwb21mdHBuYXZxeCJ9.WVScqstFkX9JEojErmErmw'
    
         // Initialize the map
-        var choroMap = new mapboxgl.Map({
-          container: 'choromap',
+        var symbolMap = new mapboxgl.Map({
+          container: 'symbolmap',
           style: 'mapbox://styles/jweyhric/cmohtggqq000201rb1ykgguzq',
           center: [-105.681, 40.341], // center over a center point in US lower 48
           zoom: 10.25 // starting zoom level
         });
 
         // Zoom contols
-        choroMap.addControl(new mapboxgl.NavigationControl({
+        symbolMap.addControl(new mapboxgl.NavigationControl({
           showCompass: false
         }), 'bottom-left');
         
