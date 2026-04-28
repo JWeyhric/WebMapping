@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>University of Oregon Mapping</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!--    Include the reference to the Mapbox JavaScript here in the <head> of the page  (Part I.1)  -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js'></script>
+
+
+          
+    <!--    Include the reference to the Mapbox CSS here in between <head> tags    (Part I.2) -->
+    
+
+    <style>
+      /* CSS Styling*/
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* CSS for choropleth map */
+      #choromap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }  
+      /* CSS for the title banner */
+      #banner {z-index: 9999;
+        background-color:rgba(155, 155, 155, 0.685);
+        opacity: 85%;
+        text-align: center;
+        color: rgba(253, 251, 212);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Map div -->
+    <div id="choromap"></div>
+
+    <!-- Title banner div -->
+    <div id="banner">
+      <h1>Rockey Mountain NP Counties' Peaks</h1>
+    </div>
+
+    <script> 
+        // Start with the Mapbox access token
+        mapboxgl.accessToken = 'pk.eyJ1IjoiandleWhyaWMiLCJhIjoiY21vaG40MHVrMDBzaTJwb21mdHBuYXZxeCJ9.WVScqstFkX9JEojErmErmw'
+   
+        // Initialize the map
+        var choroMap = new mapboxgl.Map({
+          container: 'choromap',
+          style: 'mapbox://styles/jweyhric/cmohtggqq000201rb1ykgguzq',
+          center: [-105.681, 40.341], // center over a center point in US lower 48
+          zoom: 10.25 // starting zoom level
+        });
+
+        // Zoom contols
+        choroMap.addControl(new mapboxgl.NavigationControl({
+          showCompass: false
+        }), 'bottom-left');
+        
+    </script>
+
+  </body>
+
+</html>
