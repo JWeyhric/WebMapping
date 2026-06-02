@@ -1,0 +1,18 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Placeholder",
+                "type": "history",
+                "description": "Placeholder"
+                
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [1,1]
+            }
+        }
+    ]
+}

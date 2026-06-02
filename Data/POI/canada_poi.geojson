@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Wall of Champions",
+                "type": "history",
+                "description": "Famous final chicane wall.",
+                "zoom": 20,
+                "pitch": 65,
+                "bearing": 270
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5238, 45.50375]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Canadian Hairpin (L'Epingle)",
+                "type": "history",
+                "description": "Slow hairpin before long straight.",
+                "zoom": 20,
+                "pitch": 65,
+                "bearing": 170
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.52755, 45.51431]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Iconic S-turn Start",
+                "type": "history",
+                "description": "Common fighting-ground for drivers.",
+                "zoom": 18,
+                "pitch": 65,
+                "bearing": 305
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.52233, 45.49739]
+            }
+        }
+    ]
+}

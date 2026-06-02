@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Turn 1 Grandstand",
+                "type": "grandstand",
+                "description": "Grandstand near Turn 1."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-80.23521, 25.95816]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Turn 18 Grandstand",
+                "type": "grandstand",
+                "description": "Grandstand near turn 18 hairpin."
+            },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-80.24234, 25.95961]
+                }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pitlane",
+                "type": "Pitlane",
+                "description": "Pitlane"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-80.23926, 25.959616], [-80.23913, 25.95980],
+                        [-80.23686, 25.95856], [-80.23702, 25.95834], [-80.23926, 25.959616]
+                    ]
+                ]
+            }
+        }
+    ]
+}
