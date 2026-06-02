@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1PROJECTTEST</title>
+
+    <!-- NECESSARY APIs or MODULES-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Tital One Font and Anton Font and Quicksand Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&family=Racing+Sans+One&family=Titan+One&display=swap" rel="stylesheet">
+
+    <!-- CSS SHEET -->
+    <link href="Main.css" rel="stylesheet" />
+</head>
+    <body>
+        <!-- Initial Popup -->
+        <div id="initial-popup" class="launch">
+            <div class="initial-content">
+                <h2>Welcome to the Formula 1 History Map!</h2>
+                <p>On this website you can explore maps of Formula 1 tracks
+                    along with historical sites on each circuit. As well as the winning
+                    drivers from each year per track.
+                </p>
+                <strong><p>
+                    While focused on track features, click the track title to return
+                    to original view!
+                </p></strong>
+                <button id="initial-popup-closebtn">Close</button>
+            </div>
+        </div>
+
+        <!-- Top Bar -->
+        <div id="topBar">
+            <div id="topLeft">
+                <button onclick="toggleNav()">&#9776; Tracks</button>
+            </div>
+            <div id="topCenter">
+                <h2 id="currentTrackName">Canada</h2>
+            </div>
+            <div id="topRight">
+                <button onclick="toggleHistory()">History</button>
+            </div>
+        </div>
+        <!-- History Dropdown -->
+        <div id="historySelect" class="historyDropDown">
+
+            <!-- Important Turns -->
+            <div id="historyItems" class="history-section">
+                <h2>Important Track Features</h2>
+            </div>
+            
+            <!-- Historical Winners -->
+            <div id="historyOutcome" class="history-section">
+                <button id="win-button" class="win-toggle" onclick="toggleWin('winnerItems', this)">
+                    Historical Winners <span class="arrow">&#9660;</span>
+                </button>
+
+                <div id="winnerItems" class="collapsible-content"></div>
+            </div>
+
+        </div>
+        <!-- Nav Dropdown -->
+        <div id= "trackSelect" class="trackDropDown">
+            <a class="track-link" data-track="canada">Canada</a>
+            <a class="track-link" data-track="monaco">Monaco</a>
+            <a class="track-link" data-track="barcelona">Barcelona</a>
+            <a class="track-link" data-track="austria">Austria</a>
+
+        </div>
+  
+        <div id="testmap"></div>
+        
+        <script>
+            // SIDENAV CODE
+            function openNav() {
+                document.getElementById('trackSelect').style.width = '250px';
+            }
+            function closeNav() {
+                document.getElementById('trackSelect').style.width = '0';
+             }
+        </script>
+
+        <!-- JAVASCRIPT FILE -->
+        <script src="Data/winners.js"></script>
+        <script src="F1Main.js"></script> 
+
+    </body>
+</html>

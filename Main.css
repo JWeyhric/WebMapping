@@ -1,0 +1,406 @@
+/* stop page from scrolling */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Initial Popup */
+.launch {
+    position: fixed;
+    /* cover whole screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7); /* darker transparant background */
+    z-index: 9999;
+
+    display: flex; /* hidden without js help */
+    justify-content: center;
+    align-items: center;
+}
+
+.initial-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    max-width: 700px; /* set max width to avoid popup spanning whole page */
+
+    animation: popupIn 0.45s ease;
+
+    box-shadow: 0 10px 30px rbga(0,0,0,0.35);
+}
+
+.initial-content h2 {
+    font-family: "Racing Sans One", serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #004225
+}
+
+.initial-content p {
+    font-family: "Quicksand", serif;
+    font-size: 16px;
+    color: #000000
+}
+
+#initial-popup-closebtn {
+    background: #0016dabb;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 999px; /* round edges */
+
+    padding: 9px 13px;
+
+    font-family: "Quicksand", serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    align-items: center;
+
+    transition:
+        background-color 0.25s,
+        transform 0.2s,
+        box-shadow 0.25s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* popup animation */
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: 
+            translateY(30px)
+            scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: 
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Top Bar */
+#topBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    background-color: #111111;
+    z-index: 1000;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+    /* Top Bar Buttons */
+#topBar button {
+    background: #eb2525;
+    color:#ffffff;
+    
+    border: none;
+    border-radius: 999px;
+
+    padding: 10px 18px;
+
+    font-size: 16px;
+    font-family: "Quicksand", serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s,
+        transform 0.2s,
+        box-shadow 0.25s;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+#topBar button:hover {
+    background: #ee3232;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+#topBar button:active {
+    transform: scale(0.95);
+}
+
+#topLeft {
+    justify-self: start;
+}
+
+.track-link {
+    cursor: pointer;
+}
+
+#topCenter {
+    justify-self: center;
+    color: white;
+}
+
+#topRight {
+    justify-self: end;
+}
+
+#currentTrackName {
+    font-family: "Quicksand", serif;
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+    
+    cursor: default;
+    transition: color 0.2s;
+}
+
+#currentTrackName.track-return-enabled {
+    cursor: pointer;
+    color:#ffffff;
+}
+
+#currentTrackName.track-return-enabled:hover {
+    color: #ff3b3b;
+
+    transform: scale(1.05);
+}
+
+/* Track Navigation */
+.trackDropDown {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: #1b1b1b;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.trackDropDown a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #ececec;
+    font-family: "Quicksand", serif;
+    display: block;
+    transition: 0.3s;
+}
+
+.trackDropDown a:hover {
+    background-color:#333333;
+    font-weight: 500;
+}
+
+.active-track {
+    font-weight: 500;
+}
+
+.trackDropDown a:hover.active-track {
+    background-color: #eb2525;
+    color: white;
+    font-weight: 500;
+}
+
+.active-track {
+    background-color: #eb2525;
+    color: white;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* History Panel */
+.historyDropDown {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #1b1b1b;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.historyDropDown div {
+    padding: 8px 8px 8px 8px;
+    font-size: 25px;
+    /*color: #ececec;*/
+    display: block;
+    transition: 0.3s;
+}
+
+.historyDropDown a:hover {
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.history-section {
+    margin-bottom: 30px;
+    padding: 6px;
+}
+
+#historyOutcome {
+    padding: 0 10px;
+}
+
+.history-section h2 {
+    color: white;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+/* HISTORY OUTCOMES */
+
+.win-toggle {
+    width: 100%;
+    background: none;
+    color: white;
+    border: none;
+
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Quicksand", serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #555555;
+}
+
+.historyDropDown .collapsible-content {
+    display: none;
+    /*margin-top: 12px; */
+}
+
+.historyDropDown .collapsible-content.open {
+    display: block;
+}
+
+.arrow {
+    transition: transform 0.25s;
+    border-radius: 10px;
+}
+
+.arrow.open {
+    transform: rotate(-90deg);
+}
+
+.arrow:hover {
+    background-color: #eb2525;
+
+    transition: 0.3s ease;
+}
+
+#winnerItems {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 75px;
+}
+
+.winner-card {
+    background: #f1f1f1; /* 2a2a2a */
+    color: #111111;
+    padding: 5px 5px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.winner-card .winner-year {
+    font-family: "Racing Sans One", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.winner-card .winner-driver {
+    font-family: "Racing Sans One", serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.winner-card .winner-team {
+    font-family: "Racing Sans One", serif;    
+    font-size: 18px;
+}
+
+/* TRACK FEATURES */
+
+#historyItems {
+    font-family: "Quicksand", serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.history-item {
+    background: #eb252500;
+    color:#ffffff;
+    
+    border: none;
+    border-radius: 999px;
+
+    padding: 10px 18px;
+
+    font-size: 16px;
+    font-family: "Quicksand", serif;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.history-item:hover {
+    background-color: #eb2525;
+    transition: 0.5s ease;
+}
+
+/* Map */
+#testmap {
+    position: absolute;
+    top: 60px; /* make it height of topBar */
+    left: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+}
