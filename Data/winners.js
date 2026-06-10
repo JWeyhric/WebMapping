@@ -57,6 +57,12 @@ const winnersData = {
             driver: "Max Verstappen",
             team: "Red Bull",
             color: "#3671c6"
+        },
+        {
+            year: 2022,
+            driver: "Sergio Perez",
+            team: "Red Bull",
+            color: "#3671c6"
         }
     ]
 }
