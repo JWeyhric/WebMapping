@@ -347,15 +347,19 @@ document.querySelectorAll(".track-link").forEach(link => {
 
 /* HISTORY TAB */
 
-// Toggle
+// Toggle History
 function toggleHistory() {
   const hist = document.getElementById("historySelect");
+  // move legend with sidebar
+  const legend = document.getElementById("legend");
 
   // Check for nav being open
   if(hist.style.width === "250px") {
     hist.style.width = "0";
+    legend.style.right = "25px"
   } else {
     hist.style.width = "250px";
+    legend.style.right = "275px";
   }
 }
 
