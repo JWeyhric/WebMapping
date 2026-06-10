@@ -6,7 +6,7 @@
             "properties": {
                 "title": "Wall of Champions",
                 "type": "history",
-                "description": "Famous final chicane wall.",
+                "description": "Famous final chicane wall where many champions have crashed, giving it the iconic name.",
                 "zoom": 20,
                 "pitch": 65,
                 "bearing": 270
@@ -21,7 +21,7 @@
             "properties": {
                 "title": "Canadian Hairpin (L'Epingle)",
                 "type": "history",
-                "description": "Slow hairpin before long straight.",
+                "description": "Slow hairpin before long straight where many overtakes occur.",
                 "zoom": 20,
                 "pitch": 65,
                 "bearing": 170
@@ -36,7 +36,7 @@
             "properties": {
                 "title": "Iconic S-turn Start",
                 "type": "history",
-                "description": "Common fighting-ground for drivers.",
+                "description": "Common fighting-ground for drivers as these turns appear after two straights. In 2026 we saw both Mercedes drivers (George Russell and Kimi Antonelli) fight for the lead mutliple times here.",
                 "zoom": 18,
                 "pitch": 65,
                 "bearing": 305
