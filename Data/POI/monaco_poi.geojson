@@ -4,14 +4,76 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "Placeholder",
+                "title": "Sainte Devote",
                 "type": "history",
-                "description": "Placeholder"
-                
+                "description": "With a short run to turn 1 from the start, drivers often make contact at this tight right-hander.",
+                "zoom": 19,
+                "pitch": 51,
+                "bearing": 150
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [1,1]
+                "coordinates": [7.42168, 43.73686]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Casino Square",
+                "type": "history",
+                "description": "Wraps around the iconic Monte Carlo Casino before descending towards the waterfront.",
+                "zoom": 19,
+                "pitch": 65,
+                "bearing": 110
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.42733, 43.73972]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Portier",
+                "type": "history",
+                "description": "Tunnel Entrance at Turn 8",
+                "zoom": 20,
+                "pitch": 75,
+                "bearing": 180
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.43038, 43.74098]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Nouvelle Chicane",
+                "type": "history",
+                "description": "Important chicane added for more overtaking chances after the high speed tunnel.",
+                "zoom": 20,
+                "pitch": 65,
+                "bearing": -40
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.42524, 43.73711]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Rascasse",
+                "type": "history",
+                "description": "Slow 90 degree turn where drivers can gain/lose a lot of time",
+                "zoom": 19,
+                "pitch": 65,
+                "bearing": -40
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.42219, 43.73405]
             }
         }
     ]
