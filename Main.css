@@ -455,7 +455,11 @@ body {
     /* legend track direction arrow*/
 .legend-direction {
     color:#e10600;
-    border: 2px, white;
+    text-shadow: 
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,     /* text shadow each side negative and positive to create a halo effect */
+    -1px -1px 0 #ffffff,
+    1px 1px 0 #ffffff;
     font-size: 24;
     width: 30px;
     text-align: center;
