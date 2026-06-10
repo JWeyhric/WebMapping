@@ -42,7 +42,8 @@ body {
     font-family: "Racing Sans One", serif;
     font-size: 32px;
     font-weight: 300;
-    color: #004225
+    /*color: #004225*/
+    color:#af0d0d
 }
 
 .initial-content p {
@@ -111,7 +112,8 @@ body {
 }
     /* Top Bar Buttons */
 #topBar button {
-    background: #eb2525;
+    /*background: #eb2525;*/
+    background: #b11010;
     color:#ffffff;
     
     border: none;
@@ -134,7 +136,8 @@ body {
 }
 
 #topBar button:hover {
-    background: #ee3232;
+    /*background: #ee3232;*/
+    background: #c70f0f;
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.35);
 }
@@ -176,7 +179,8 @@ body {
 }
 
 #currentTrackName.track-return-enabled:hover {
-    color: #ff3b3b;
+    /*color: #ff3b3b;*/
+    color: #ff7070;
 
     transform: scale(1.05);
 }
@@ -218,13 +222,15 @@ body {
 }
 
 .trackDropDown a:hover.active-track {
-    background-color: #eb2525;
+    /*background-color: #eb2525;*/
+    background-color: #c70f0f;
     color: white;
     font-weight: 500;
 }
 
 .active-track {
-    background-color: #eb2525;
+    /*background-color: #eb2525;*/
+    background-color: #b11010;
     color: white;
 }
 
@@ -322,7 +328,9 @@ body {
 }
 
 .arrow:hover {
-    background-color: #eb2525;
+    /*background-color: #eb2525;*/
+
+    background-color: #b11010;
 
     transition: 0.3s ease;
 }
@@ -376,6 +384,11 @@ body {
 }
 
 .history-item {
+    display: block;
+    text-align: center;
+    /*width: 90%; -- could make buttons all same width */
+    margin: 0 auto;     /* ensure buttons are centered */
+
     background: #eb252500;
     color:#ffffff;
     
@@ -392,7 +405,8 @@ body {
 }
 
 .history-item:hover {
-    background-color: #eb2525;
+    /*background-color: #eb2525;*/
+    background-color: #b11010;
     transition: 0.5s ease;
 }
 
@@ -404,3 +418,65 @@ body {
     height: calc(100vh - 60px);
     width: 100%;
 }
+
+/* Map Controls Style -- needs to move with sidebar */
+.mapboxgl-ctrl-bottom-left {
+    transition:
+        left 0.5s ease;
+}
+
+/* Popups Style */
+.mapboxgl-popup-content {
+
+    /*background-color: #428ace;*/
+    background-color: #313131;
+    color:#ffffff;
+
+   /* color: #000000; */
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-family: "Quicksand", serif;
+    font-size: 14px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+
+    /* animate */
+    animation:
+        popupGrow 0.25s ease;
+}
+
+.mapboxgl-popup-content h3 {
+    font-size: 18px;
+}
+
+.mapboxgl-popup-tip {
+    border-top-color: #ffffff !important; /* Overides the triangle color of the popup from each side if wanted*/
+}
+
+.mapboxgl-popup-close-button {
+    color: white;   /* make x to close popup white */
+    top: 5px;
+    right: 5px;
+    font-size: 18px; /* move x and make it larger */
+}
+
+.mapboxgl-popup-close-button:hover {
+    transform: scale(1.15); /* make x slightly larger on hover */
+    background: transparent; /* remove default dark-grey background on hover */
+}
+
+@keyframes popupGrow {          /* popup animation, makes it appear slightly slower */
+    from {
+        transform:
+            scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform:
+            scale(1);
+        opacity: 1;
+    }
+} 
