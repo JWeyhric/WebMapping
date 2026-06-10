@@ -41,6 +41,12 @@ const winnersData = {
     ],
     monaco: [
         {
+            year: 2026,
+            driver: "Kimi Antonelli",
+            team: "Mercedes",
+            color: "#27F4D2"
+        },
+        {
             year: 2025,
             driver: "Lando Norris",
             team: "McLaren",
