@@ -419,6 +419,58 @@ body {
     width: 100%;
 }
 
+/* Legend Styling */
+#legend {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+
+    background: rgba(17,17,17,0.9);
+    color: white;
+    font-family: "Quicksand", serif;
+
+    padding: 14px;
+    border-radius: 16px;
+    min-width: 180px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    /* transition for sidebar */
+    transition: right 0.5s;
+}
+
+#legend h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+    /* legend track direction arrow*/
+.legend-direction {
+    color:#e10600;
+    border: 2px, white;
+    font-size: 24;
+    width: 30px;
+    text-align: center;
+}
+
+    /* legend track feature circle */
+.legend-history {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #3b49c9;
+    border: 2px solid white;
+    display: inline-block;
+}
+
 /* Map Controls Style -- needs to move with sidebar */
 .mapboxgl-ctrl-bottom-left {
     transition:
