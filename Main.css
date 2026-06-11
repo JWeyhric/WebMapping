@@ -39,7 +39,7 @@ body {
 }
 
 .initial-content h2 {
-    font-family: "Racing Sans One", serif;
+    font-family: "Racing Sans One", arial, serif;
     font-size: 32px;
     font-weight: 300;
     /*color: #004225*/
@@ -47,7 +47,7 @@ body {
 }
 
 .initial-content p {
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-size: 16px;
     color: #000000
 }
@@ -61,7 +61,7 @@ body {
 
     padding: 9px 13px;
 
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-size: 12px;
     font-weight: 700;
 
@@ -122,7 +122,7 @@ body {
     padding: 10px 18px;
 
     font-size: 16px;
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-weight: 700;
 
     cursor: pointer;
@@ -164,7 +164,7 @@ body {
 }
 
 #currentTrackName {
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     color: #ffffff;
     margin: 0;
     font-size: 24px;
@@ -207,7 +207,7 @@ body {
     padding: 8px 8px 8px 32px;
     font-size: 25px;
     color: #ececec;
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     display: block;
     transition: 0.3s;
 }
@@ -298,7 +298,7 @@ body {
 
     font-size: 28px;
     font-weight: bold;
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
 
     display: flex;
     justify-content: space-between;
@@ -359,26 +359,26 @@ body {
 }
 
 .winner-card .winner-year {
-    font-family: "Racing Sans One", serif;
+    font-family: "Racing Sans One", arial, serif;
     font-size: 20px;
     font-weight: bold;
 }
 
 .winner-card .winner-driver {
-    font-family: "Racing Sans One", serif;
+    font-family: "Racing Sans One", arial, serif;
     font-size: 24px;
     font-weight: 100;
 }
 
 .winner-card .winner-team {
-    font-family: "Racing Sans One", serif;    
+    font-family: "Racing Sans One", arial, serif;    
     font-size: 18px;
 }
 
 /* TRACK FEATURES */
 
 #historyItems {
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-size: 20px;
     text-align: center;
 }
@@ -398,7 +398,7 @@ body {
     padding: 10px 18px;
 
     font-size: 16px;
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-weight: 700;
 
     cursor: pointer;
@@ -428,7 +428,7 @@ body {
 
     background: rgba(17,17,17,0.9);
     color: white;
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
 
     padding: 14px;
     border-radius: 16px;
@@ -494,7 +494,7 @@ body {
 
     text-align: center;
 
-    font-family: "Quicksand", serif;
+    font-family: "Quicksand", arial, serif;
     font-size: 14px;
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
@@ -535,4 +535,4 @@ body {
             scale(1);
         opacity: 1;
     }
-} 
+}
