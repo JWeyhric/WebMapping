@@ -51,27 +51,6 @@ const tracks = [
       [7.44731, 43.75000]          // half-screen [7.43731, 43.74041] // northeast corner
     ],
     color: "#000000"
-  },
-  {
-    id: "barcelona",
-    file: "Data/Tracks/es-1991.geojson",
-    center: [2.25789, 41.56966],
-    zoom: 15,
-    color: "#000000"
-  },
-  {
-    id: "austria",
-    file: "Data/Tracks/at-1969.geojson",
-    center: [14.76232, 47.22275],
-    zoom: 15,
-    color: "#000000"
-  },
-  {
-    id: "silverstone",
-    file: "Data/Tracks/gb-1948.geojson",
-    center: [-1.01615, 52.07160],
-    zoom: 14.5,
-    color: "#000000"
   }
 ];
 
