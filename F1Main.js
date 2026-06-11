@@ -339,7 +339,7 @@ document.querySelectorAll(".track-link").forEach(link => {
       trackID.charAt(0).toUpperCase() + trackID.slice(1);
       
       toggleNav(); // Closes dropdown
-      closeHistory();
+      toggleHistory();
       updateHistory(track); // Updated history for track
     }
   });
