@@ -363,10 +363,6 @@ function toggleHistory() {
   }
 }
 
-function closeHistory() {
-  document.getElementById("historySelect").style.width = "0";
-}
-
 function toggleWin(sectionID, button) {
   const section = document.getElementById(sectionID);
   const arrow = button.querySelector(".arrow");
